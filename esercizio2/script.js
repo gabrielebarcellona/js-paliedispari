@@ -6,12 +6,29 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
 
-const eleNumber = parseInt(prompt('inserisci un numero o pari o dispari da 1 a 5.'));
-console.log(eleNumber)
+const divisibility = prompt('pari o dispari?');
+const number = parseInt(prompt('dammi un numero da 1 a 5'));
+const computer = numberPc(1,5);
+const sum = number + computer ;
+console.log(number , computer , sum , divisibility)
 
-function numberPc(min,max){
-    Math.floor(Math.random() * 5) + 1;
-    return numberPc
+
+
+if(divisibility == pariodispari(sum)){
+    console.log('hai vinto')
+}else{
+    console.log('hai perso')
 }
 
-    numberPc = numberPc(1,3)
+
+function numberPc(min,max){
+   return Math.floor(Math.random() * 5) + 1
+    
+}
+
+    function pariodispari(number){
+        if(number % 2 == 0){
+            return 'pari';
+        }
+        return 'dispari'
+    }
